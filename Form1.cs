@@ -44,11 +44,10 @@ namespace VideoPlaylist
         private void button1_Click(object sender, EventArgs e)
         {
             CreateVideoDB db = new CreateVideoDB(ADOSupport);
-            if (1 == 2)
-            {
-                db.CreateSchema();
-                db.UpdateSchema();
-            }
+            
+                //db.CreateSchema();
+                //db.UpdateSchema();
+            
             PlaylistPanel playlistPanel = new PlaylistPanel();
             playlistPanel.Show();
         }
