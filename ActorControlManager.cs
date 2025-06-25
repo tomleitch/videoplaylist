@@ -197,7 +197,7 @@ namespace VideoPlaylist
                 string forename = parts.Count > 0 ? parts[0] : "";
                 string surname = parts.Count > 1 ? parts[parts.Count - 1] : "";
 
-                ESqlCommand cmd = ADOSupport.GetESQLCommand();
+                ESqlCommand cmd = ADOSupport.GetESQLCommandQuery();
                 cmd.CommandText = "INSERT INTO Actor (FullName, Forename, Surname, Include) OUTPUT INSERTED.Id VALUES (@FullName, @Forename, @Surname, @Include)";
                 cmd.AddParameterWithValue("@FullName", fullName);
                 cmd.AddParameterWithAnyValue("@Forename", forename);

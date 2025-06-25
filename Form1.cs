@@ -29,7 +29,7 @@ namespace VideoPlaylist
         {
             get
             {
-                if (System.Diagnostics.Debugger.IsAttached)
+                if (System.Diagnostics.Debugger.IsAttached) 
                     return "VideoPlayerDebug";
                 else
                     return "VideoPlayer";
@@ -77,6 +77,9 @@ namespace VideoPlaylist
             _playlistPlayer.Player = axWindowsMediaPlayer1;
             _playlistPlayer.SetPlaylistSelector(_playlistSelector);
             _playlistPlayer.Initialize();
+
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;       
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -110,6 +113,28 @@ namespace VideoPlaylist
         {
             Console.WriteLine(e.KeyValue);
             _playlistPlayer.KeyPressed(e.KeyCode); // Pass keypress to PlaylistPlayer
+        }
+
+        private void axWindowsMediaPlayer1_KeyPressEvent(object sender, AxWMPLib._WMPOCXEvents_KeyPressEvent e)
+        {
+            Console.WriteLine(e.nKeyAscii);
+        }
+
+        private void axWindowsMediaPlayer1_KeyDownEvent(object sender, AxWMPLib._WMPOCXEvents_KeyDownEvent e)
+        {
+            Console.WriteLine(e.nKeyCode);
+
+            if ( e.nKeyCode == 67 && e.nShiftState == 2)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnOnboarding_Click(object sender, EventArgs e)
+        {
+            VideoOnboardingForm frm = new VideoOnboardingForm(ADOSupport);
+            frm.ShowDialog();
+
         }
     }
 }

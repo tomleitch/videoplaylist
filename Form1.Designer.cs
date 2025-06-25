@@ -39,16 +39,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabVideo = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panelPlaylist = new System.Windows.Forms.Panel();
-            this.btnppCreatePlaylist = new System.Windows.Forms.Button();
-            this.btnppDelete = new System.Windows.Forms.Button();
-            this.txtppNewPlaylistName = new System.Windows.Forms.TextBox();
-            this.labppNewPlaylist = new System.Windows.Forms.Label();
-            this.txtppNumEntries = new System.Windows.Forms.TextBox();
-            this.labppNumEntries = new System.Windows.Forms.Label();
-            this.butppClear = new System.Windows.Forms.Button();
-            this.cboppPlaylist = new System.Windows.Forms.ComboBox();
-            this.labppPlaylist = new System.Windows.Forms.Label();
             this.panelPlaylistFilter = new System.Windows.Forms.Panel();
             this.txtfvCurrentMatches = new System.Windows.Forms.TextBox();
             this.labfvCurrentMatches = new System.Windows.Forms.Label();
@@ -63,13 +53,26 @@
             this.lblfvTagsGroup1 = new System.Windows.Forms.Label();
             this.clbfvGenre = new System.Windows.Forms.CheckedListBox();
             this.lblfvGenre = new System.Windows.Forms.Label();
+            this.panelPlaylist = new System.Windows.Forms.Panel();
+            this.btnppCreatePlaylist = new System.Windows.Forms.Button();
+            this.btnppDelete = new System.Windows.Forms.Button();
+            this.txtppNewPlaylistName = new System.Windows.Forms.TextBox();
+            this.labppNewPlaylist = new System.Windows.Forms.Label();
+            this.txtppNumEntries = new System.Windows.Forms.TextBox();
+            this.labppNumEntries = new System.Windows.Forms.Label();
+            this.butppClear = new System.Windows.Forms.Button();
+            this.cboppPlaylist = new System.Windows.Forms.ComboBox();
+            this.labppPlaylist = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnOnboarding = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabVideo.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.panelPlaylist.SuspendLayout();
             this.panelPlaylistFilter.SuspendLayout();
+            this.panelPlaylist.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // axWindowsMediaPlayer1
@@ -77,17 +80,19 @@
             this.axWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.axWindowsMediaPlayer1.Enabled = true;
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(3, 3);
-            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(2615, 1291);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(1910, 1011);
             this.axWindowsMediaPlayer1.TabIndex = 0;
+            this.axWindowsMediaPlayer1.KeyDownEvent += new AxWMPLib._WMPOCXEvents_KeyDownEventHandler(this.axWindowsMediaPlayer1_KeyDownEvent);
+            this.axWindowsMediaPlayer1.KeyPressEvent += new AxWMPLib._WMPOCXEvents_KeyPressEventHandler(this.axWindowsMediaPlayer1_KeyPressEvent);
             // 
             // axWindowsMediaPlayer2
             // 
             this.axWindowsMediaPlayer2.Enabled = true;
             this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(235, 282);
-            this.axWindowsMediaPlayer2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.axWindowsMediaPlayer2.Margin = new System.Windows.Forms.Padding(2);
             this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
             this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
             this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(8, 38);
@@ -108,7 +113,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(286, 392);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 78);
             this.button1.TabIndex = 3;
@@ -120,7 +125,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(286, 58);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(184, 48);
             this.button2.TabIndex = 4;
@@ -132,7 +137,7 @@
             // btnSelectPlaylist
             // 
             this.btnSelectPlaylist.Location = new System.Drawing.Point(286, 120);
-            this.btnSelectPlaylist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSelectPlaylist.Margin = new System.Windows.Forms.Padding(2);
             this.btnSelectPlaylist.Name = "btnSelectPlaylist";
             this.btnSelectPlaylist.Size = new System.Drawing.Size(184, 50);
             this.btnSelectPlaylist.TabIndex = 5;
@@ -144,7 +149,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(286, 183);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(184, 58);
             this.button4.TabIndex = 6;
@@ -157,11 +162,13 @@
             // 
             this.tabControl1.Controls.Add(this.tabVideo);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(2629, 1330);
+            this.tabControl1.Size = new System.Drawing.Size(1924, 1050);
             this.tabControl1.TabIndex = 7;
             // 
             // tabVideo
@@ -170,7 +177,7 @@
             this.tabVideo.Location = new System.Drawing.Point(4, 29);
             this.tabVideo.Name = "tabVideo";
             this.tabVideo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabVideo.Size = new System.Drawing.Size(2621, 1297);
+            this.tabVideo.Size = new System.Drawing.Size(1916, 1017);
             this.tabVideo.TabIndex = 0;
             this.tabVideo.Text = "Video";
             this.tabVideo.UseVisualStyleBackColor = true;
@@ -183,103 +190,10 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(2621, 1297);
+            this.tabPage2.Size = new System.Drawing.Size(1916, 1017);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Playlist";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // panelPlaylist
-            // 
-            this.panelPlaylist.Controls.Add(this.btnppCreatePlaylist);
-            this.panelPlaylist.Controls.Add(this.btnppDelete);
-            this.panelPlaylist.Controls.Add(this.txtppNewPlaylistName);
-            this.panelPlaylist.Controls.Add(this.labppNewPlaylist);
-            this.panelPlaylist.Controls.Add(this.txtppNumEntries);
-            this.panelPlaylist.Controls.Add(this.labppNumEntries);
-            this.panelPlaylist.Controls.Add(this.butppClear);
-            this.panelPlaylist.Controls.Add(this.cboppPlaylist);
-            this.panelPlaylist.Controls.Add(this.labppPlaylist);
-            this.panelPlaylist.Location = new System.Drawing.Point(29, 6);
-            this.panelPlaylist.Name = "panelPlaylist";
-            this.panelPlaylist.Size = new System.Drawing.Size(1038, 177);
-            this.panelPlaylist.TabIndex = 12;
-            // 
-            // btnppCreatePlaylist
-            // 
-            this.btnppCreatePlaylist.Location = new System.Drawing.Point(698, 98);
-            this.btnppCreatePlaylist.Name = "btnppCreatePlaylist";
-            this.btnppCreatePlaylist.Size = new System.Drawing.Size(154, 47);
-            this.btnppCreatePlaylist.TabIndex = 8;
-            this.btnppCreatePlaylist.Text = "Create";
-            this.btnppCreatePlaylist.UseVisualStyleBackColor = true;
-            // 
-            // btnppDelete
-            // 
-            this.btnppDelete.Location = new System.Drawing.Point(858, 19);
-            this.btnppDelete.Name = "btnppDelete";
-            this.btnppDelete.Size = new System.Drawing.Size(154, 49);
-            this.btnppDelete.TabIndex = 7;
-            this.btnppDelete.Text = "Delete";
-            this.btnppDelete.UseVisualStyleBackColor = true;
-            // 
-            // txtppNewPlaylistName
-            // 
-            this.txtppNewPlaylistName.Location = new System.Drawing.Point(192, 119);
-            this.txtppNewPlaylistName.Name = "txtppNewPlaylistName";
-            this.txtppNewPlaylistName.Size = new System.Drawing.Size(474, 26);
-            this.txtppNewPlaylistName.TabIndex = 6;
-            // 
-            // labppNewPlaylist
-            // 
-            this.labppNewPlaylist.AutoSize = true;
-            this.labppNewPlaylist.Location = new System.Drawing.Point(36, 105);
-            this.labppNewPlaylist.Name = "labppNewPlaylist";
-            this.labppNewPlaylist.Size = new System.Drawing.Size(92, 40);
-            this.labppNewPlaylist.TabIndex = 5;
-            this.labppNewPlaylist.Text = "New Playlist\r\nName:";
-            // 
-            // txtppNumEntries
-            // 
-            this.txtppNumEntries.Location = new System.Drawing.Point(192, 76);
-            this.txtppNumEntries.Name = "txtppNumEntries";
-            this.txtppNumEntries.ReadOnly = true;
-            this.txtppNumEntries.Size = new System.Drawing.Size(223, 26);
-            this.txtppNumEntries.TabIndex = 4;
-            // 
-            // labppNumEntries
-            // 
-            this.labppNumEntries.AutoSize = true;
-            this.labppNumEntries.Location = new System.Drawing.Point(40, 79);
-            this.labppNumEntries.Name = "labppNumEntries";
-            this.labppNumEntries.Size = new System.Drawing.Size(100, 20);
-            this.labppNumEntries.TabIndex = 3;
-            this.labppNumEntries.Text = "Num Entries:";
-            // 
-            // butppClear
-            // 
-            this.butppClear.Location = new System.Drawing.Point(698, 14);
-            this.butppClear.Name = "butppClear";
-            this.butppClear.Size = new System.Drawing.Size(154, 54);
-            this.butppClear.TabIndex = 2;
-            this.butppClear.Text = "Clear";
-            this.butppClear.UseVisualStyleBackColor = true;
-            // 
-            // cboppPlaylist
-            // 
-            this.cboppPlaylist.FormattingEnabled = true;
-            this.cboppPlaylist.Location = new System.Drawing.Point(192, 28);
-            this.cboppPlaylist.Name = "cboppPlaylist";
-            this.cboppPlaylist.Size = new System.Drawing.Size(474, 28);
-            this.cboppPlaylist.TabIndex = 1;
-            // 
-            // labppPlaylist
-            // 
-            this.labppPlaylist.AutoSize = true;
-            this.labppPlaylist.Location = new System.Drawing.Point(40, 28);
-            this.labppPlaylist.Name = "labppPlaylist";
-            this.labppPlaylist.Size = new System.Drawing.Size(61, 20);
-            this.labppPlaylist.TabIndex = 0;
-            this.labppPlaylist.Text = "Playlist:";
             // 
             // panelPlaylistFilter
             // 
@@ -408,11 +322,124 @@
             this.lblfvGenre.TabIndex = 0;
             this.lblfvGenre.Text = "Genre:";
             // 
+            // panelPlaylist
+            // 
+            this.panelPlaylist.Controls.Add(this.btnppCreatePlaylist);
+            this.panelPlaylist.Controls.Add(this.btnppDelete);
+            this.panelPlaylist.Controls.Add(this.txtppNewPlaylistName);
+            this.panelPlaylist.Controls.Add(this.labppNewPlaylist);
+            this.panelPlaylist.Controls.Add(this.txtppNumEntries);
+            this.panelPlaylist.Controls.Add(this.labppNumEntries);
+            this.panelPlaylist.Controls.Add(this.butppClear);
+            this.panelPlaylist.Controls.Add(this.cboppPlaylist);
+            this.panelPlaylist.Controls.Add(this.labppPlaylist);
+            this.panelPlaylist.Location = new System.Drawing.Point(29, 6);
+            this.panelPlaylist.Name = "panelPlaylist";
+            this.panelPlaylist.Size = new System.Drawing.Size(1038, 177);
+            this.panelPlaylist.TabIndex = 12;
+            // 
+            // btnppCreatePlaylist
+            // 
+            this.btnppCreatePlaylist.Location = new System.Drawing.Point(698, 98);
+            this.btnppCreatePlaylist.Name = "btnppCreatePlaylist";
+            this.btnppCreatePlaylist.Size = new System.Drawing.Size(154, 47);
+            this.btnppCreatePlaylist.TabIndex = 8;
+            this.btnppCreatePlaylist.Text = "Create";
+            this.btnppCreatePlaylist.UseVisualStyleBackColor = true;
+            // 
+            // btnppDelete
+            // 
+            this.btnppDelete.Location = new System.Drawing.Point(858, 19);
+            this.btnppDelete.Name = "btnppDelete";
+            this.btnppDelete.Size = new System.Drawing.Size(154, 49);
+            this.btnppDelete.TabIndex = 7;
+            this.btnppDelete.Text = "Delete";
+            this.btnppDelete.UseVisualStyleBackColor = true;
+            // 
+            // txtppNewPlaylistName
+            // 
+            this.txtppNewPlaylistName.Location = new System.Drawing.Point(192, 119);
+            this.txtppNewPlaylistName.Name = "txtppNewPlaylistName";
+            this.txtppNewPlaylistName.Size = new System.Drawing.Size(474, 26);
+            this.txtppNewPlaylistName.TabIndex = 6;
+            // 
+            // labppNewPlaylist
+            // 
+            this.labppNewPlaylist.AutoSize = true;
+            this.labppNewPlaylist.Location = new System.Drawing.Point(36, 105);
+            this.labppNewPlaylist.Name = "labppNewPlaylist";
+            this.labppNewPlaylist.Size = new System.Drawing.Size(92, 40);
+            this.labppNewPlaylist.TabIndex = 5;
+            this.labppNewPlaylist.Text = "New Playlist\r\nName:";
+            // 
+            // txtppNumEntries
+            // 
+            this.txtppNumEntries.Location = new System.Drawing.Point(192, 76);
+            this.txtppNumEntries.Name = "txtppNumEntries";
+            this.txtppNumEntries.ReadOnly = true;
+            this.txtppNumEntries.Size = new System.Drawing.Size(223, 26);
+            this.txtppNumEntries.TabIndex = 4;
+            // 
+            // labppNumEntries
+            // 
+            this.labppNumEntries.AutoSize = true;
+            this.labppNumEntries.Location = new System.Drawing.Point(40, 79);
+            this.labppNumEntries.Name = "labppNumEntries";
+            this.labppNumEntries.Size = new System.Drawing.Size(100, 20);
+            this.labppNumEntries.TabIndex = 3;
+            this.labppNumEntries.Text = "Num Entries:";
+            // 
+            // butppClear
+            // 
+            this.butppClear.Location = new System.Drawing.Point(698, 14);
+            this.butppClear.Name = "butppClear";
+            this.butppClear.Size = new System.Drawing.Size(154, 54);
+            this.butppClear.TabIndex = 2;
+            this.butppClear.Text = "Clear";
+            this.butppClear.UseVisualStyleBackColor = true;
+            // 
+            // cboppPlaylist
+            // 
+            this.cboppPlaylist.FormattingEnabled = true;
+            this.cboppPlaylist.Location = new System.Drawing.Point(192, 28);
+            this.cboppPlaylist.Name = "cboppPlaylist";
+            this.cboppPlaylist.Size = new System.Drawing.Size(474, 28);
+            this.cboppPlaylist.TabIndex = 1;
+            // 
+            // labppPlaylist
+            // 
+            this.labppPlaylist.AutoSize = true;
+            this.labppPlaylist.Location = new System.Drawing.Point(40, 28);
+            this.labppPlaylist.Name = "labppPlaylist";
+            this.labppPlaylist.Size = new System.Drawing.Size(61, 20);
+            this.labppPlaylist.TabIndex = 0;
+            this.labppPlaylist.Text = "Playlist:";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.btnOnboarding);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(1916, 1017);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Other";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnOnboarding
+            // 
+            this.btnOnboarding.Location = new System.Drawing.Point(91, 66);
+            this.btnOnboarding.Name = "btnOnboarding";
+            this.btnOnboarding.Size = new System.Drawing.Size(191, 88);
+            this.btnOnboarding.TabIndex = 0;
+            this.btnOnboarding.Text = "On Boarding";
+            this.btnOnboarding.UseVisualStyleBackColor = true;
+            this.btnOnboarding.Click += new System.EventHandler(this.btnOnboarding_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2629, 1330);
+            this.ClientSize = new System.Drawing.Size(1924, 1050);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnSelectPlaylist);
@@ -422,7 +449,7 @@
             this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -433,10 +460,11 @@
             this.tabControl1.ResumeLayout(false);
             this.tabVideo.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.panelPlaylist.ResumeLayout(false);
-            this.panelPlaylist.PerformLayout();
             this.panelPlaylistFilter.ResumeLayout(false);
             this.panelPlaylistFilter.PerformLayout();
+            this.panelPlaylist.ResumeLayout(false);
+            this.panelPlaylist.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -478,6 +506,8 @@
         private System.Windows.Forms.Label lblfvTagsGroup1;
         private System.Windows.Forms.CheckedListBox clbfvGenre;
         private System.Windows.Forms.Label lblfvGenre;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button btnOnboarding;
     }
 }
 

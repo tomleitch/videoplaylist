@@ -103,10 +103,11 @@ namespace VideoPlaylist
             {
                 switch (key)
                 {
+                    case Keys.Enter: Start(); break;
                     case Keys.Space: Pause(); break;
                     case Keys.H: ShowHelp(); break;
-                    case Keys.Right: Next(); break;
-                    case Keys.Left: Previous(); break;
+                    case Keys.N: Next(); break;
+                    case Keys.P: Previous(); break;
                     case Keys.Up: SkipForward10Min(); break;
                     case Keys.Down: SkipForward1Min(); break;
                     case Keys.PageUp: SkipBackward10Min(); break;
@@ -148,6 +149,9 @@ namespace VideoPlaylist
                 }
                 _player.URL = _currentPlaylist[_currentIndex].FilePath;
                 _player.Ctlcontrols.play();
+                _player.settings.mute = true;
+                _player.stretchToFit = true;
+                _player.uiMode = "full";
                 _isPlaying = true;
                 UpdateVideoLastPlayed();
                 DBLogger.Log($"Started playback for VideoId: {_currentPlaylist[_currentIndex].VideoId}");
