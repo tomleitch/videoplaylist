@@ -1,0 +1,17 @@
+USE [VideoPlayerDebug]
+GO
+/****** Object:  Table [dbo].[SearchCriteria]    Script Date: 24/06/2025 21:17:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[SearchCriteria](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[SearchDate] [datetime] NULL,
+	[PlaylistId] [int] NULL,
+ CONSTRAINT [PK_SearchCriteria] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
